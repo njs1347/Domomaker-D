@@ -51,7 +51,8 @@ DomoSchema.methods.toAPI = function() {
 DomoSchema.statics.findByOwner = function(ownerId, callback) {
 	
 	var search = {
-		owner: mongoose.Types.ObjectId(ownerId)
+		//owner: mongoose.Types.ObjectId(ownerId)
+		owner: ownerId
 	};
 	
 	return DomoModel.find(search).select("name age color").exec(callback);

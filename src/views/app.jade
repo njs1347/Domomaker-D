@@ -24,11 +24,11 @@ block body
     else
         each val in domos
             div.domo
+                a(href="/killer/#{val._id}", class="remove") Delete
                 img(class="domoFace", src="/assets/img/domoface.jpeg", alt="domo face")
                 h3.domoName Name: #{val.name}
                 h3.domoAge Age: #{val.age}
                 h3.domoColor Color: #{val.color}
-                a(class="domoDelete", href="/killer/#{val._id}") Delete
   #domoMessage
     img#speech(src="/assets/img/speech.png", alt="speech box")
     h3
